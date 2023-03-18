@@ -7,7 +7,6 @@
 
 # baisc notes 
 ________________________________________________
-# Flask-simple-To-Do-List
 - create venv 
 - pip install flask
 
@@ -39,22 +38,17 @@ ________________________________________________
 
 ----create model in flask(database tables)-----
 - create connecttion with data base:
+    ```
     install pymongo
         pip install Flask pymongo
         import : from pymongo import MongoClient
+        
 
 - client= MongoClient('localhost', 27017)
 - create document :
     db = client.FileName # create table
     dbdata = db.Collectioname # triger
 
+        
+        
 
-- create class 
-    class Todo(db.Model):
-        sno =db.Column(db.Integer,primary_key=True)
-        title = db.Column(db.String(100), unique=True, nullable=False)
-        
-        
-        
-        ![img1](https://user-images.githubusercontent.com/107461719/224266677-d5c119bc-ad50-4031-8317-c4a75852744c.PNG)
-![image](https://user-images.githubusercontent.com/107461719/224266841-f815697f-6aa8-4567-9db6-f839ae4ab521.png)
