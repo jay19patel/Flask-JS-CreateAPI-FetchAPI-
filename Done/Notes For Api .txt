@@ -1,0 +1,39 @@
+
+C-Create 
+Operation. insert_one() insert_many()
+METHOD = POST
+
+R-Read 
+Operation. find() find_one()
+METHOD = GET
+
+
+U-Update
+ Operation. update_one() 
+METHOD = PATCH,PUT
+ 
+patch is chnage parsialy data(khali je vastu change kare ej update kare)
+put is change whole data (ek vastu chnage karse to pan akha data farithi upload karse )
+
+D-Delete 
+Operation. delete_one()
+METHOD = DELETE
+
+
+- Create baseOf flask
+- connect DATABASE
+- create dashbord HTML page 
+- recive  form in POST function 
+- set recive form data in variable 
+
+
+## response retrun in this formate :
+
+recivedata = list(myapis.find_one())
+    Message = Response(response=json.dumps(
+                {"Message":"Display All Users",
+                "Payload":recivedata,
+                "Status":200}),
+            status=201,
+            mimetype ="application/json")
+    return Message
